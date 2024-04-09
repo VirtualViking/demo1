@@ -29,19 +29,39 @@ public class Test extends HttpServlet {
         String url = scheme + "://" + host + contexPath + servletPath;
         String url2 = scheme + "://" + ip + ":" + port + contexPath + servletPath;
         try (PrintWriter out = resp.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println(" <head>");
+            out.println("<!DOCTYPE html>"); /*informa al navegador qué versión de HTML (o XML) se usó para escribir el documento.
+            Doctype es una declaración no una etiqueta. Además, podemos referirnos a ella como "document type declaration" */
+            
+            out.println("<html>"); /* es el código que se utiliza para estructurar 
+            y desplegar una página web y sus contenidos*/
+            
+            out.println(" <head>"); /*provee información general
+            acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos*/
             out.println(" <meta charset=\"UTF-8\">");
-            out.println(" <title>Cabeceras HTTP Request</title>");
-            out.println(" </head>");
+
+            out.println(" <title> Cabeceras HTTP Request</title>"); /*El elemento <title> HTML define el título del documento
+            que se muestra en un browser la barra de título o la pestaña de una página.*/
+
+            out.println(" </head>"); /*Indica la parte del cuerpo del contenido de un documento HTML. Es una etiqueta esencial
+            para cualquier documento ya que indica donde empieza el contenido visible del documento.*/
             out.println(" <body>");
-            out.println(" <h1>Cabeceras HTTP Request!</h1>");
-            out.println("<ul>");
-            out.println("<li>metodo http: " + metodoHttp + "</li>");
-            out.println("<li>request uri: " + requestUri + "</li>");
+
+            out.println(" <h1> Cabeceras HTTP Request!</h1>"); /*Una etiqueta H1 es un encabezado HTML
+            que se utiliza para marcar el tema principal de una página.*/
+
+            out.println("<ul>"); /*ul de "unordered list" -lista no ordenada . crea una lista no ordenada.*/
+
+            out.println("<li>metodo http: " + metodoHttp + "</li>"); /*Dentro de las listas, los elementos se identifican
+            con la etiqueta LI.*/
+
+            out.println("<li>request uri: " + requestUri + "</li>"); /* proporcionan un medio para localizar
+            y recuperar recursos de información en una red*/
+
             out.println("<li>request url: " + requestUrl + "</li>");
-            out.println("<li>context path: " + contexPath + "</li>");
+
+            out.println("<li>context path: " + contexPath + "</li>"); /*El server. contextPath establece la ruta contexto
+             para acceso a la aplicación, desde un navegador*/
+
             out.println("<li>servlet path: " + servletPath + "</li>");
             out.println("<li>ip local: " + ip + "</li>");
             out.println("<li>ip cliente: " + ipCliente + "</li>");
