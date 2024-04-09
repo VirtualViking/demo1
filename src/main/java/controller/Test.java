@@ -50,6 +50,7 @@ public class Test extends HttpServlet {
             out.println("<li>host: " + host + "</li>");
             out.println("<li>url: " + url + "</li>");
             out.println("<li>url2: " + url2 + "</li>");
+
             Enumeration<String> headerNames = req.getHeaderNames();
             while (headerNames.hasMoreElements()) {
                 String cabecera = headerNames.nextElement();
