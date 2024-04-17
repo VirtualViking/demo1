@@ -62,13 +62,22 @@ public class Test extends HttpServlet {
             out.println("<li>context path: " + contexPath + "</li>"); /*El server. contextPath establece la ruta contexto
              para acceso a la aplicación, desde un navegador*/
 
-            out.println("<li>servlet path: " + servletPath + "</li>");
-            out.println("<li>ip local: " + ip + "</li>");
-            out.println("<li>ip cliente: " + ipCliente + "</li>");
+            out.println("<li>servlet path: " + servletPath + "</li>"); /* (ruta del servlet) se refiere a la parte de la
+            URL que identifica el servlet específico que manejará la solicitud dentro del contexto de la aplicación web.*/
+
+            out.println("<li>ip local: " + ip + "</li>"); /*Una dirección IP es una dirección única que identifica a un dispositivo
+            en Internet o en una red local. IP significa “protocolo de Internet”*/
+
+            out.println("<li>ip cliente: " + ipCliente + "</li>"); /*Una direccion ip cliente describen solo la computadora que se utiliza,
+            no el usuario . Si varios usuarios comparten la misma computadora, serán indistinguibles.*/
+
             out.println("<li>puerto local: " + port + "</li>");
             out.println("<li>scheme: " + scheme + "</li>");
-            out.println("<li>host: " + host + "</li>");
-            out.println("<li>url: " + url + "</li>");
+            out.println("<li>host: " + host + "</li>"); /*Un hosting es un servicio de alojamiento para sitios web. En lugar de alojar personas,
+            el hosting web aloja los contenidos de tu web y tu correo electrónico para que puedan ser visitados */
+
+            out.println("<li>url: " + url + "</li>"); /*las URL es uno de los conceptos claves de la Web. Es el mecanismo usado por los navegadores
+            para obtener cualquier recurso publicado en la web.*/
             out.println("<li>url2: " + url2 + "</li>");
 
             Enumeration<String> headerNames = req.getHeaderNames();
